@@ -1,0 +1,8 @@
+[phases.build]
+cmds = ["pip install -r requirements.txt"]
+
+[phases.start]
+cmd = "gunicorn -w 4 -b 0.0.0.0:$PORT server.app:app"
+
+[variables]
+PYTHON_VERSION = "3.12"
