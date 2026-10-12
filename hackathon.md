@@ -38,6 +38,7 @@ COG (GitHub: Cogkreates)
 - Ran both modes against the deterministic mock supplier:
   - Baseline (recovery off): sold-out mug and declined payment are left unfilled. Spent 64.00 of 300.00. Remaining: ceramic mug 12, LED bulb 40, tote bag 30.
   - Recovery on: the mug is substituted with the approved stoneware mug and the payment is retried. Spent 213.60 of 300.00. Remaining: only the tote bag (30), which is over its price ceiling.
+- Ran `python3 test_agent.py`: 3 tests (sold-out substitution, price ceiling alert, payment retry) ran and passed.
 - Trace IDs for both runs: TODO, add from the neatlogs dashboard.
 
 ## Demo
@@ -47,11 +48,10 @@ Run `uv run --python 3.12 --with neatlogs python run_demo.py` (recovery on) or p
 - The supplier and shipment tracker are mocks. No real supplier integration yet.
 - Decisions are rule-based. A Claude planner is planned, not built.
 - Approval is auto-approved in the demo, and notifications print to the console instead of sending email.
-- `test_agent.py` was written in the Entire session. Whether the tests pass has not been confirmed.
 - Demand is unvalidated, and order fees are about 58% of modelled revenue.
 - Resale of ordered stock is a planned expansion, not built.
 
 ## Submission
 - Confirmed from the hackathon page: public repo with commits made during the event; demo video of 3 minutes or less covering neatlogs, Entire and cfo.ai; Entire checkpoint link and ID; business plan; quote-post on X during the Oct 12 window, 7:00-11:55 PM IST.
 - Pending: deadline conflict (Entire's page says Oct 10-11), to confirm on Discord.
-- Outstanding: demo video, X post, trace IDs, test results.
+- Outstanding: demo video, X post, trace IDs.
